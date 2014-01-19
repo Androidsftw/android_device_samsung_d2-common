@@ -211,6 +211,7 @@
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
         <item>"wlan0"</item>
+        <item>"softap.*"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -339,5 +340,9 @@
     
     <!-- Enable support of custom button backlight -->
    <bool name="config_button_brightness_support">true</bool>
+
+    <!-- Performance profiles -->
+    <string name="config_perf_profile_prop">sys.perf.profile</string>
+    <string name="config_perf_profile_default_entry">1</string>
 
 </resources>
