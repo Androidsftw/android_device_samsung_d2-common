@@ -77,7 +77,18 @@ PRODUCT_PACKAGES += \
 
 #working init binary
 PRODUCT_COPY_FILES += \
-    device/samsung/d2-common/rootdir/etc/init:root/init
+   device/samsung/d2-common/rootdir/etc/init:root/init
+
+#sdcard readahead
+PRODUCT_COPY_FILES += \
+    device/samsung/d2-common/mod/etc/init.d/21readahead:system/etc/init.d/21readahead
+
+# SuperSU Support 
+PRODUCT_COPY_FILES += \
+    device/samsung/d2-common/mod/xbin/su:system/xbin/daemonsu \
+    device/samsung/d2-common/mod/xbin/su:system/xbin/su \
+    device/samsung/d2-common/mod/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    device/samsung/d2-common/mod/app/Superuser.apk:system/app/Superuser.apk
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -187,5 +198,3 @@ ifeq ($(filter cm_apexqtmo cm_expressatt,$(TARGET_PRODUCT)),)
 else
     $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 endif
-
-
