@@ -75,10 +75,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
-#working init binary
-PRODUCT_COPY_FILES += \
-   device/samsung/d2-common/rootdir/etc/init:root/init
-
 #sdcard readahead
 PRODUCT_COPY_FILES += \
     device/samsung/d2-common/mod/etc/init.d/21readahead:system/etc/init.d/21readahead
