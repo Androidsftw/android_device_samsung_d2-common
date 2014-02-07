@@ -46,6 +46,8 @@ WIFI_DRIVER_MODULE_NAME := "dhd"
 BOARD_EGL_CFG := device/samsung/d2-common/configs/egl.cfg
 
 # Recovery
+PRODUCT_COPY_FILES += \
+    device/samsung/d2-common/twrp.fstab:recovery/root/etc/twrp.fstab
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/d2-common/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_USES_MMCUTILS := true
