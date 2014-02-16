@@ -25,7 +25,7 @@
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/d2-common/include
 
-TARGET_TOOLS_PREFIX := /home/ani/omnirom/prebuilts/gcc/linux-x86/arm/linaro4.7/bin/arm-linux-androideabi-
+TARGET_TOOLS_PREFIX := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/linaro4.7/bin/arm-linux-androideabi-
 
 # Kernel
 TARGET_KERNEL_SOURCE        := kernel/samsung/d2
